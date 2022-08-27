@@ -1,4 +1,5 @@
 import React from 'react';
+import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 import logo from '../../assets/images/ifex-logo.png';
 
@@ -8,18 +9,27 @@ const Navbar = () => {
         <>
             <div className="w-full shadow-md">
                 <div className='lg:block md:hidden sm:hidden'>
-                    <div className="mx-auto lg:w-10/12 md:w-11/12 sm:w-full flex justify-between py-4">
+                    <div className="mx-auto lg:w-10/12 md:w-11/12 sm:w-full flex justify-between py-2">
                         <div className="">
                             <img src={logo} alt="logo" />
                         </div>
                         <div className="pt-4">
-                            
-                            <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">Home</span>
-                            <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">About us</span>
-                            <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">Services</span>
-                            <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">Branches</span>
-                            <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">Contact us</span>
-                            <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">Get Quote</span>
+                            <Link to='/'>
+                                <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700 cursor-pointer">Home</span>
+                            </Link>
+                            <Link to="/about-us">
+                                <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700 cursor-pointer">About us</span>
+                            </Link>
+                            <Link to="/services">
+                                <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700 cursor-pointer">Services</span>
+                            </Link>
+                            <Link to="/branches">
+                                <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700 cursor-pointer">Branches</span>
+                            </Link>
+                            <Link to="/contact-us">
+                                <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700 cursor-pointer">Contact us</span>
+                            </Link>
+                            {/* <span className="lg:mx-6 md:mx-5 sm:mx-4 lg:text-lg md:text-sm sm:text-xs text-black hover:text-blue-700">Get Quote</span> */}
                         
                         </div>
 
