@@ -13,8 +13,8 @@ const HeroCard = () => {
         <>
             <div className='w-full bg-blue-400'>
                 <div className='mb-20 pt-32 text-center'>
-                    <h1 className='font-bold text-white' style={{fontSize: '100px'}}>Large enough to handle,</h1>
-                    <h1 className='font-bold text-white' style={{fontSize: '100px'}}>Small enough to care</h1>
+                    <h1 className='font-bold text-white' style={{fontSize: '3rem'}}>Large enough to handle,</h1>
+                    <h1 className='font-bold text-white' style={{fontSize: '3rem'}}>Small enough to care</h1>
                 </div>
 
                 <div className='mt-4 mb-8 text-center'>

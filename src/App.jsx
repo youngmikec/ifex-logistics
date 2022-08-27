@@ -14,9 +14,9 @@ function App() {
       const Component = route.component;
       return <Route path={route.path} key={indx} element={
       <UnProtectedRoutes>
-        <TrackingContext.Provider value={trackingData}>
+        {/* <TrackingContext.Provider value={trackingData}> */}
           {Component}
-        </TrackingContext.Provider>
+        {/* </TrackingContext.Provider> */}
       </UnProtectedRoutes>
     } />
     });

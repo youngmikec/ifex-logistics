@@ -91,14 +91,14 @@ const Home = () => {
                 <div className="skew-wrapper">
                 </div>
                 <div className="track-content-wrapper w-full">
-                    <div className="text-black mt-4 mb-40 text-center">
+                    <div className="text-black mt-2 mb-32 text-center">
                         <h1 className="title">Track your Item</h1>
                     </div>
 
                     {/* tracking section */}
-                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 pt-20">
+                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 pt-12">
                         <div className="tk-img"></div>
-                        <div className="w-full lg:pt-48">
+                        <div className="w-full lg:pt-16">
                             <div className="w-10/12 mx-auto">
                                 <h1 className="title text-white">Track your Item now</h1>
                                 <p className="sub-title text-white">Always know your items location and status with just a few clicks below.</p>
@@ -108,14 +108,14 @@ const Home = () => {
                                         type="text" 
                                         value={trackingCode}
                                         onChange={(e) => setTrackingCode(e.target.value)}
-                                        className="w-full rounded-lg bg-white px-3 py-6 broder-2 border-blue-400" 
+                                        className="w-full rounded-lg bg-white px-3 py-3 broder-2 border-blue-400" 
                                         placeholder="Enter shipment code" />
                                     </div>
                                     <div className="my-8 items-center">
                                         <button onClick={(e) => {
                                             e.preventDefault();
                                             handleTrackItem();
-                                        }} className="border-2 border-blue-400 text-white rounded-lg py-3 px-12 hover:bg-white hover:py-6 hover:text-blue-400 transition-all">
+                                        }} className="border-2 border-blue-400 text-white rounded-lg py-1 px-8 hover:bg-white hover:py-2 hover:text-blue-400 transition-all">
                                             <span className="text-2xl">track</span>
                                         </button>
                                         
@@ -126,8 +126,8 @@ const Home = () => {
                     </div>
 
                     {/* quote section */}
-                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 mt-20">
-                        <div className="w-full lg:pt-48">
+                    <div className="grid lg:grid-cols-2 sm:grid-cols-1 mt-24">
+                        <div className="w-full lg:pt-16">
                             <div className="mx-auto w-9/12">
                                 <h1 className="title text-white">Price Quotation</h1>
                                 <p className="sub-title text-white">
@@ -136,7 +136,7 @@ const Home = () => {
                                     you are sure to get the lowest price possible for your items. 
                                 </p>
                                 <Link to="/pricing">
-                                    <button className="text-blue-400 bg-white my-8 text-xl px-12 py-4 rounded-lg hover:py-7 transition-all">
+                                    <button className="text-blue-400 bg-white my-8 text-xl px-12 py-2 rounded-lg hover:py-4 transition-all">
                                         Get Quote 
                                         <span></span>
                                     </button>
@@ -154,7 +154,7 @@ const Home = () => {
                     <div className="my-16">
                         <h1 className="title text-center">Our Services</h1>
                     </div>
-                    <div className="grid lg:grid-cols-3 sm:grid-cols-1">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
 
                         <div>
                             <ServiceCard />
@@ -182,13 +182,13 @@ const Home = () => {
 
                             <form className="my-8">
                                 <div className="my-6">
-                                    <input type="text" className="w-full py-8 px-3 bg-white text-gray-600 rounded-lg" placeholder="First Name" />
+                                    <input type="text" className="w-full py-4 px-3 bg-white text-gray-600 rounded-lg" placeholder="First Name" />
                                 </div>
                                 <div className="my-6">
-                                    <input type="text" className="w-full py-8 px-3 bg-white text-gray-600 rounded-lg" placeholder="Last Name" />
+                                    <input type="text" className="w-full py-4 px-3 bg-white text-gray-600 rounded-lg" placeholder="Last Name" />
                                 </div>
                                 <div className="my-6">
-                                    <input type="text" className="w-full py-8 px-3 bg-white text-gray-600 rounded-lg" placeholder="Email" />
+                                    <input type="text" className="w-full py-4 px-3 bg-white text-gray-600 rounded-lg" placeholder="Email" />
                                 </div>
                                 <div className="my-6">
                                     <button className="w-full bg-red-900 rounded-lg py-4 text-white">

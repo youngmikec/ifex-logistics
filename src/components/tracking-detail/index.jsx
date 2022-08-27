@@ -4,7 +4,7 @@ import { FiSettings, FiTruck, FiPackage } from 'react-icons/fi';
 import { FaHome } from 'react-icons/fa';
 
 const TrackingDetail = () => {
-    const trackingData = useContext()
+    // const trackingData = useContext();
     return (
         <>
             <div className="my-20 mx-auto rounded-lg p-12 shadow-xl bg-white lg:w-8/12 md:w-9/12 sm:w-11/12 h-6/12">
@@ -18,16 +18,16 @@ const TrackingDetail = () => {
                         <div className="relative w-full">
                             <hr className="border-4 border-gray-700" />
                             <div className="flex justify-between absolute -top-7 w-full">
-                                <span className="p-5 rounded-full text-white lg:text-2xl md:text-lg sm:text-sm bg-gray-700">
+                                <span className="p-5 rounded-full text-white lg:text-lg md:text-lg sm:text-sm bg-gray-700">
                                     <FiSettings />
                                 </span>
-                                <span className="p-5 rounded-full text-white lg:text-2xl md:text-lg sm:text-sm bg-blue-400">
+                                <span className="p-5 rounded-full text-white lg:text-lg md:text-lg sm:text-sm bg-blue-400">
                                     <FiTruck />
                                 </span>
-                                <span className="p-5 rounded-full text-white lg:text-2xl md:text-lg sm:text-sm bg-gray-700">
+                                <span className="p-5 rounded-full text-white lg:text-lg md:text-lg sm:text-sm bg-gray-700">
                                     <FiPackage />
                                 </span>
-                                <span className="p-5 rounded-full text-white lg:text-2xl md:text-lg sm:text-sm bg-gray-700">
+                                <span className="p-5 rounded-full text-white lg:text-lg md:text-lg sm:text-sm bg-gray-700">
                                     <FaHome />
                                 </span>
                             </div>
