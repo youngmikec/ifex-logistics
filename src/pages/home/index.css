@@ -1,0 +1,54 @@
+.backDrop {
+    background-image: url('../../assets/images/drop.jpg');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    height: inherit;
+}
+
+.title {
+    font-size: 50px;
+    font-weight: 800;
+}
+
+.sub-title{
+    font-size: 25px;
+}
+
+.track-wrapper {
+    background-color: white;
+    height: max-content;
+    position: relative;
+    margin-top: 4rem;
+}
+
+.skew-wrapper {
+    background-color: #333;
+    margin-top: 25rem;
+    margin-bottom: 15rem;
+    height: 1500px;
+    transform: skewY(4deg);
+    -moz-transform: skewY(4deg);
+}
+.track-content-wrapper {
+    position: absolute;
+    top: -12rem;
+    z-index: 10;
+}
+
+.tk-img {
+    background-image: url('../../assets/images/laptop.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+    width: 100%
+}
+.qt-img {
+    background-image: url('../../assets/images/van.png');
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    min-height: 700px;
+    width: 100%
+}
