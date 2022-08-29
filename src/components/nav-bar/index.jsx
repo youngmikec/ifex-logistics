@@ -11,7 +11,7 @@ const Navbar = () => {
                 <div className='lg:block md:hidden sm:hidden'>
                     <div className="mx-auto lg:w-10/12 md:w-11/12 sm:w-full flex justify-between py-2">
                         <div className="">
-                            <img src={logo} alt="logo" />
+                            <img src={logo} style={{width: '70%'}} alt="logo" />
                         </div>
                         <div className="pt-4">
                             <Link to='/'>
@@ -35,8 +35,10 @@ const Navbar = () => {
 
                         <div className="py-4">
                             <span
-                            className="mx-4 border-2 border-blue-500 rounded-lg px-4 py-1 hover:bg-blue-500 hover:text-white"
-                            >login</span>
+                                className="mx-4 border-2 border-blue-500 rounded-lg px-4 py-1 hover:bg-blue-500 hover:text-white"
+                            >
+                                <Link to="/login">login</Link>
+                            </span>
                             {/* <span 
                             className="mx-4 border-2 border-blue-500 rounded-lg px-4 py-1 hover:bg-blue-500 hover:text-white"
                             >Sign up</span> */}

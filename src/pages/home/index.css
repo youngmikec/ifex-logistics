@@ -24,15 +24,15 @@
 
 .skew-wrapper {
     background-color: #333;
-    margin-top: 25rem;
-    margin-bottom: 15rem;
-    height: 1100px;
+    margin-top: 8rem;
+    margin-bottom: 10rem;
+    height: 900px;
     transform: skewY(4deg);
     -moz-transform: skewY(4deg);
 }
 .track-content-wrapper {
     position: absolute;
-    top: -12rem;
+    top: 0rem;
     z-index: 10;
 }
 
@@ -48,7 +48,7 @@
     background-image: url('../../assets/images/van.png');
     background-repeat: no-repeat;
     background-size: cover;
-    background-position: center;
+    background-position: center center;
     max-height: 500px;
     width: 90%
 }

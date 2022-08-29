@@ -1,11 +1,9 @@
-import React, {createContext} from 'react';
+import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
 import { authRoutes } from './routes';
 import ProtectedRoutes, { UnProtectedRoutes } from './routes/protected-route';
 
-let trackingData = {message: 'welcome'};
-const TrackingContext = createContext(trackingData);
 
 function App() {
   
@@ -13,24 +11,22 @@ function App() {
     routes.map((route, indx) => {
       const Component = route.component;
       return <Route path={route.path} key={indx} element={
-      <UnProtectedRoutes>
-        {/* <TrackingContext.Provider value={trackingData}> */}
+        <UnProtectedRoutes>
           {Component}
-        {/* </TrackingContext.Provider> */}
-      </UnProtectedRoutes>
+        </UnProtectedRoutes>
     } />
     });
   
-  const getProtectedRoutes = (routes) =>
-    routes.map((route, indx) => {
-      const Component = route.component;
-      return <Route path={route.path} key={indx} element={<ProtectedRoutes>{Component}</ProtectedRoutes>} />
-    })
+  // const getProtectedRoutes = (routes) =>
+  //   routes.map((route, indx) => {
+  //     const Component = route.component;
+  //     return <Route path={route.path} key={indx} element={<ProtectedRoutes>{Component}</ProtectedRoutes>} />
+  // })
 
   return (
     <Router>
       <Routes>
-        {getRoutes(authRoutes)}
+          {getRoutes(authRoutes)}
         {/* {getProtectedRoutes(protectedRoutes)} */}
       </Routes>
     </Router>

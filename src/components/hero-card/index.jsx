@@ -1,12 +1,6 @@
 import React from 'react';
 import forklift from '../../assets/images/forklift1.png';
 
-const style = {
-    left: {
-        marginLeft: '0px',
-        transition: "marginLeft 2s linear 1s"
-    }
-}
 
 const HeroCard = () => {
     return (

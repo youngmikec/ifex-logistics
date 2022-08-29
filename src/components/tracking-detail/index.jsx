@@ -1,10 +1,9 @@
-import React, { useContext } from 'react';
+import React from 'react';
 
 import { FiSettings, FiTruck, FiPackage } from 'react-icons/fi';
 import { FaHome } from 'react-icons/fa';
 
 const TrackingDetail = () => {
-    // const trackingData = useContext();
     return (
         <>
             <div className="my-20 mx-auto rounded-lg p-12 shadow-xl bg-white lg:w-8/12 md:w-9/12 sm:w-11/12 h-6/12">

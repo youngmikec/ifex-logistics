@@ -1,10 +1,8 @@
 import React, {useState} from "react";
-// import { Navigation, Pagination, Scrollbar, A11y, Autoplay } from 'swiper';
-// import { Swiper, SwiperSlide } from 'swiper/react';
-// // Import Swiper styles'
-// import 'swiper/css';
-// import 'swiper/css/navigation';
-// import 'swiper/css/pagination';
+import { BiWallet } from 'react-icons/bi';
+import { BsBoxSeam } from 'react-icons/bs';
+import { VscRocket } from 'react-icons/vsc';
+
 import './index.css';
 import Footer from "../../components/footer";
 import Navbar from "../../components/nav-bar";
@@ -12,6 +10,7 @@ import HeroCard from "../../components/hero-card";
 import ServiceCard from "../../components/service-card";
 import { Link } from "react-router-dom";
 import axios from "axios";
+import WhatsappButton from "../../components/whatsapp-btn";
 
 const Home = () => {
     const [trackingCode, setTrackingCode] = useState('');
@@ -86,14 +85,65 @@ const Home = () => {
                 <HeroCard />
             </div>
 
+            {/* Why Choose us */}
+            <section id="choos-us" className="mt-20">
+                <div className="my-8">
+                    <h2 className="title text-center">Why Choose Us</h2>
+                </div>
+                <div className="w-10/12  mx-auto">
+                    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 w-full">
+                        <div className="mx-4 my-6">
+                            <div className="mx-auto w-max text-center">
+                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-blue-500">
+                                    <BsBoxSeam />
+                                </div>
+                            </div>
+                            <div className="text-center my-6">
+                                <h2 className="text-blue-500 text-xl">
+                                    <b>BETTER</b>
+                                </h2>
+                            </div>
+                            <p>Ifex uses the power of technology to give you more visibility and more flexibility for your urban, last-mile shipments</p>
+                        </div>
+                        <div className="mx-4 my-6">
+                            <div className="mx-auto w-max text-center">
+                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-blue-500">
+                                    <BiWallet />
+                                </div>
+                            </div>
+                            <div className="text-center my-6">
+                                <h2 className="text-blue-500 text-xl">
+                                    <b>CHEAPER</b>
+                                </h2>
+                            </div>
+                            <p>Our platform cuts the unnecessary logistics steps to make B2B deliveries more affordable, without hidden costs</p>
+                        </div>
+                        <div className="mx-4 my-6">
+                            <div className="mx-auto w-max text-center">
+                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-blue-500">
+                                    <VscRocket /> 
+                                </div>
+                            </div>
+                            <div className="text-center my-6">
+                                <h2 className="text-blue-500 text-xl">
+                                    <b>FASTER</b>
+                                </h2>
+                            </div>
+                            <p>Ifex uses the power of technology to give you more visibility and more flexibility for your urban, last-mile shipments</p>
+                        </div>
+                    </div>
+
+                </div>
+            </section>
+
             {/* Track and Quote section */}
             <section className="bg-white track-wrapper">
                 <div className="skew-wrapper">
                 </div>
                 <div className="track-content-wrapper w-full">
-                    <div className="text-black mt-2 mb-32 text-center">
+                    {/* <div className="text-black mt-2 mb-32 text-center">
                         <h1 className="title">Track your Item</h1>
-                    </div>
+                    </div> */}
 
                     {/* tracking section */}
                     <div className="grid lg:grid-cols-2 sm:grid-cols-1 pt-12">
@@ -127,7 +177,7 @@ const Home = () => {
 
                     {/* quote section */}
                     <div className="grid lg:grid-cols-2 sm:grid-cols-1 mt-24">
-                        <div className="w-full lg:pt-16">
+                        <div className="w-full lg:pt-10">
                             <div className="mx-auto w-9/12">
                                 <h1 className="title text-white">Price Quotation</h1>
                                 <p className="sub-title text-white">
@@ -157,14 +207,15 @@ const Home = () => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
 
                         <div>
-                            <ServiceCard />
+                            <ServiceCard title="Road Transport" />
                         </div>
                         <div>
-                            <ServiceCard />
+                            <ServiceCard title="Packaging" />
                         </div>
                         <div>
-                            <ServiceCard />
+                            <ServiceCard title="Warehousing" />
                         </div>
+                        
                     </div>
                 </div>
             </div>
@@ -202,6 +253,10 @@ const Home = () => {
                     <div className="backDrop"></div>
                 </div>
             </section>
+
+            {/* whatsapp */}
+            <WhatsappButton />
+
 
             {/* Footer */}
             <section id="footer">

@@ -16,13 +16,16 @@ const Services = () => {
                         <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
 
                             <div>
-                                <ServiceCard />
+                                <ServiceCard title="Road Transport" />
                             </div>
                             <div>
-                                <ServiceCard />
+                                <ServiceCard title="Packaging" />
                             </div>
                             <div>
-                                <ServiceCard />
+                                <ServiceCard title="Warehousing" />
+                            </div>
+                            <div>
+                                <ServiceCard title="Storage" />
                             </div>
                         </div>
                     </div>

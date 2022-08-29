@@ -1,4 +1,5 @@
 import AboutUs from "../pages/about";
+import Branches from "../pages/branches";
 import ContactUs from "../pages/contact-us";
 import Home from "../pages/home";
 import Login from "../pages/login";
@@ -26,6 +27,10 @@ const authRoutes = [
     {
         path: '/pricing',
         component: <Pricing />
+    },
+    {
+        path: '/branches',
+        component: <Branches />
     },
     {
         path: '/track/search/:tracking_code',
