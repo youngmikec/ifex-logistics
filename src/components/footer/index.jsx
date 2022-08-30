@@ -8,29 +8,29 @@ const Footer = () => {
         <>
             <div className="bg-[#333] w-full pt-20 pb-8">
                 <div className='mx-auto w-10/12'>
-                    <div className='flex justify-between'>
+                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 '>
                         <div>
-                            <h1 className='text-blue-400 text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Our Services</h1>
+                            <h1 className='text-[#058AB3] text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Our Services</h1>
                             <ul className='list-none'>
-                                <li className='list-item my-8 text-gray-300 hover:text-blue-400 cursor-pointer'>
+                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
                                     <Link to="/services">Road Transportation</Link>
                                 </li>
-                                <li className='list-item my-8 text-gray-300 hover:text-blue-400 cursor-pointer'>
+                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
                                     <Link to="/services">Packaging</Link>
                                 </li>
-                                <li className='list-item my-8 text-gray-300 hover:text-blue-400 cursor-pointer'>
+                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
                                     <Link to="/services">Storage</Link>
                                 </li>
-                                <li className='list-item my-8 text-gray-300 hover:text-blue-400 cursor-pointer'>
+                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
                                     <Link to="/services">Warehousing</Link>
                                 </li>
                             </ul>
                         </div>
                         <div>
-                            <h1 className='text-blue-400 text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Quick Links</h1>
+                            <h1 className='text-[#058AB3] text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Quick Links</h1>
                             <ul className='list-none'>
-                                <li className='list-item my-8 text-gray-300 hover:text-blue-400 cursor-pointer'>Webmail</li>
-                                <li className='list-item my-8 text-gray-300 hover:text-blue-400 cursor-pointer'>
+                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>Webmail</li>
+                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
                                     <Link to='/login'>
                                     Admin Login
                                     </Link>
@@ -38,7 +38,7 @@ const Footer = () => {
                             </ul>
                         </div>
                         <div>
-                            <h1 className='text-blue-400 text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Mobile App Coming Soon on</h1>
+                            <h1 className='text-[#058AB3] text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Mobile App Coming Soon on</h1>
                             <div>
                                 <span className='mx-4 cursor-pointer inline'>
                                     <img src={appSotroeIcone} alt="appstore" />
@@ -56,7 +56,7 @@ const Footer = () => {
                             <p>© 2022, Ifex Logistics. All right reserved</p>
                         </div>
                         <div>
-                            <p className='hover:text-blue-400'>Terms and Conditions | Privacy Policies</p>
+                            <p className='hover:text-[#058AB3]'>Terms and Conditions | Privacy Policies</p>
                         </div>
                     </div>
                 </div>

@@ -1,5 +1,5 @@
 .backDrop {
-    background-image: url('../../assets/images/drop.jpg');
+    background-image: url('../../assets/images/drop.png');
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
@@ -37,9 +37,9 @@
 }
 
 .tk-img {
-    background-image: url('../../assets/images/laptop.png');
+    background-image: url('../../assets/images/Distance.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center;
     max-height: 500px;
     width: 100%

@@ -61,7 +61,7 @@ function PricingComp({states}) {
                                     <input 
                                         type="text" 
                                         name='originatingAddress' 
-                                        className='bg-white px-4 py-4 rounded-lg w-full'
+                                        className='bg-white px-4 py-2 rounded-lg w-full'
                                         value={originatingAddress}
                                         onChange={(e) => setOriginatingAddress(e.target.value)}
                                     />
@@ -71,7 +71,7 @@ function PricingComp({states}) {
                                     
                                     <select 
                                         name="originatingState"
-                                        className='bg-white px-4 py-4 rounded-lg w-full'
+                                        className='bg-white px-4 py-2 rounded-lg w-full'
                                         value={originatingState}
                                         onChange={(e) => setOriginatingState(e.target.value)}
                                     >
@@ -88,7 +88,7 @@ function PricingComp({states}) {
                                     <input 
                                         type="text" 
                                         name='destinationAddress' 
-                                        className='bg-white px-4 py-4 rounded-lg w-full'
+                                        className='bg-white px-4 py-2 rounded-lg w-full'
                                         value={destinationAddress}
                                         onChange={(e) => setDestinationAddress(e.target.value)}
                                     />
@@ -97,7 +97,7 @@ function PricingComp({states}) {
                                     <label className='block' htmlFor="destinationState">Destination State</label>
                                     <select 
                                         name="destinationState"
-                                        className='bg-white px-4 py-4 rounded-lg w-full'
+                                        className='bg-white px-4 py-2 rounded-lg w-full'
                                         value={destinationState}
                                         onChange={(e) => setDestinationState(e.target.value)}
                                     >
@@ -113,7 +113,7 @@ function PricingComp({states}) {
                                     <label className='block' htmlFor="category">Category</label>
                                     <select 
                                         name="category" 
-                                        className='bg-white px-4 py-4 rounded-lg w-full'
+                                        className='bg-white px-4 py-2 rounded-lg w-full'
                                         value={category}
                                         onChange={(e) => setCategory(e.target.value)}
                                     >
@@ -128,7 +128,7 @@ function PricingComp({states}) {
                                     <input 
                                         type="number" 
                                         name='weight' 
-                                        className='bg-white px-4 py-4 rounded-lg w-full'
+                                        className='bg-white px-4 py-2 rounded-lg w-full'
                                         value={weight}
                                         min="1"
                                         onChange={(e) => setWeight(e.target.value)}
@@ -138,7 +138,7 @@ function PricingComp({states}) {
 
                             <div className='flex justify-end'>
                                 <button 
-                                    className='bg-gray-600 text-white p-4 rounded-lg'
+                                    className='bg-[#058AB3] text-white px-4 py-3 rounded-lg'
                                     onClick={(e) => {
                                         e.preventDefault();
                                         handleEstimatePrice();

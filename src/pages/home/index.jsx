@@ -36,12 +36,12 @@ const Home = (props) => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 w-full">
                         <div className="mx-4 my-6">
                             <div className="mx-auto w-max text-center">
-                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-blue-500">
+                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
                                     <BsBoxSeam />
                                 </div>
                             </div>
                             <div className="text-center my-6">
-                                <h2 className="text-blue-500 text-xl">
+                                <h2 className="text-[#058AB3] text-xl">
                                     <b>BETTER</b>
                                 </h2>
                             </div>
@@ -49,12 +49,12 @@ const Home = (props) => {
                         </div>
                         <div className="mx-4 my-6">
                             <div className="mx-auto w-max text-center">
-                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-blue-500">
+                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
                                     <BiWallet />
                                 </div>
                             </div>
                             <div className="text-center my-6">
-                                <h2 className="text-blue-500 text-xl">
+                                <h2 className="text-[#058AB3] text-xl">
                                     <b>CHEAPER</b>
                                 </h2>
                             </div>
@@ -62,12 +62,12 @@ const Home = (props) => {
                         </div>
                         <div className="mx-4 my-6">
                             <div className="mx-auto w-max text-center">
-                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-blue-500">
+                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
                                     <VscRocket /> 
                                 </div>
                             </div>
                             <div className="text-center my-6">
-                                <h2 className="text-blue-500 text-xl">
+                                <h2 className="text-[#058AB3] text-xl">
                                     <b>FASTER</b>
                                 </h2>
                             </div>
@@ -100,14 +100,14 @@ const Home = (props) => {
                                         type="text" 
                                         value={trackingCode}
                                         onChange={(e) => setTrackingCode(e.target.value)}
-                                        className="w-full rounded-lg bg-white px-3 py-3 broder-2 border-blue-400" 
+                                        className="w-full rounded-lg bg-white px-3 py-3 broder-2 border-[#058AB3]" 
                                         placeholder="Enter shipment code" />
                                     </div>
                                     <div className="my-8 items-center">
                                         <button onClick={(e) => {
                                             e.preventDefault();
                                             handleTrackItem();
-                                        }} className="border-2 border-blue-400 text-white rounded-lg py-1 px-8 hover:bg-white hover:py-2 hover:text-blue-400 transition-all">
+                                        }} className="border-2 border-[#058AB3] text-white rounded-lg py-1 px-8 hover:bg-white hover:py-2 hover:text-[#058AB3] transition-all">
                                             <span className="text-2xl">track</span>
                                         </button>
                                         
@@ -128,7 +128,7 @@ const Home = (props) => {
                                     you are sure to get the lowest price possible for your items. 
                                 </p>
                                 <Link to="/pricing">
-                                    <button className="text-blue-400 bg-white my-8 text-xl px-12 py-2 rounded-lg hover:py-4 transition-all">
+                                    <button className="text-[#058AB3] bg-white my-8 text-xl px-12 py-2 rounded-lg hover:py-4 transition-all">
                                         Get Quote 
                                         <span></span>
                                     </button>
@@ -149,13 +149,13 @@ const Home = (props) => {
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
 
                         <div>
-                            <ServiceCard title="Road Transport" />
+                            <ServiceCard title="HOUSE TO HOUSE PICKUP" />
                         </div>
                         <div>
-                            <ServiceCard title="Packaging" />
+                            <ServiceCard title="HAULAGE" />
                         </div>
                         <div>
-                            <ServiceCard title="Warehousing" />
+                            <ServiceCard title="OVERSEAS SHIPPING" />
                         </div>
                         
                     </div>
@@ -165,7 +165,7 @@ const Home = (props) => {
             {/* keep in touch */}
             <section id="keepInTouch">
                 <div className="grid lg:grid-cols-2 sm:grid-cols-1">
-                    <div className="bg-blue-400">
+                    <div className="bg-[#058AB3]">
                         <div className="mx-auto w-10/12 pt-28">
                             <div className="text-white">
                                 <h1 className="font-bold title" >Keep in touch.</h1>
@@ -182,6 +182,12 @@ const Home = (props) => {
                                 </div>
                                 <div className="my-6">
                                     <input type="text" className="w-full py-4 px-3 bg-white text-gray-600 rounded-lg" placeholder="Email" />
+                                </div>
+                                <div className="my-6">
+                                    <input type="text" className="w-full py-4 px-3 bg-white text-gray-600 rounded-lg" placeholder="Subject" />
+                                </div>
+                                <div className="my-6">
+                                    <input type="text" className="w-full py-4 px-3 bg-white text-gray-600 rounded-lg" placeholder="Message" />
                                 </div>
                                 <div className="my-6">
                                     <button className="w-full bg-red-900 rounded-lg py-4 text-white">

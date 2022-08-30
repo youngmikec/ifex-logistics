@@ -40,15 +40,15 @@ const Login = () => {
     }
     return (
         <>
-            <div className='bg-blue-400 wrapper'>
+            <div className='bg-[#058AB3] wrapper'>
                 <div className="flex justify-center">
 
                     <div className="my-6 bg-white rounded-lg mx-auto lg:w-5/12 sm:w-6/12 lg:px-20 sm:px-12 py-6">
-                        <div className='flex justify-center'>
-                            <img src={logo} alt="logo" />
+                        <div className='flex justify-center mx-auto' style={{width: '25%'}}>
+                            <img src={logo} style={{width: '100%'}} alt="logo" />
                         </div>
 
-                        <h1 className='text-blue-400 text-center my-6 text-3xl'><b>Welcome! Please Login!</b></h1>
+                        <h1 className='text-[#058AB3] text-center my-6 text-3xl'><b>Welcome! Please Login!</b></h1>
 
                         <div className=''>
                             <form>
@@ -72,7 +72,7 @@ const Login = () => {
                                 </div>
                                 <div className='my-6 text-center'>
                                     <button 
-                                        className='bg-blue-400 text-white px-12 py-3 rounded-lg'
+                                        className='bg-[#058AB3] text-white px-12 py-3 rounded-lg'
                                         onClick={(e) => {
                                             e.preventDefault();
                                             handleSubmit();
