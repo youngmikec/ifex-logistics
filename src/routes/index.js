@@ -1,3 +1,3 @@
 import authRoutes from "./auth-routes";
-
-export { authRoutes };
+import privateRoutes from "./private-routes";
+export { authRoutes, privateRoutes };

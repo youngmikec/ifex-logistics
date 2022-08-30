@@ -2,7 +2,7 @@ import React from 'react';
 import { BsWhatsapp } from 'react-icons/bs';
 
 function WhatsappButton() {
-    const url = `https://api.whatsapp.com/send?phone=2348108816975`;
+    const url = `https://api.whatsapp.com/send?phone=2349055377822`;
   return (
     <>
         <div className='fixed bottom-6 right-2'>

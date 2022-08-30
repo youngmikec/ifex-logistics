@@ -1,7 +1,7 @@
 import React from 'react';
 import { BrowserRouter as Router, Route, Routes } from 'react-router-dom';
 
-import { authRoutes } from './routes';
+import { authRoutes, privateRoutes } from './routes';
 import ProtectedRoutes, { UnProtectedRoutes } from './routes/protected-route';
 
 
@@ -17,17 +17,21 @@ function App() {
     } />
     });
   
-  // const getProtectedRoutes = (routes) =>
-  //   routes.map((route, indx) => {
-  //     const Component = route.component;
-  //     return <Route path={route.path} key={indx} element={<ProtectedRoutes>{Component}</ProtectedRoutes>} />
-  // })
+  const getProtectedRoutes = (routes) =>
+    routes.map((route, indx) => {
+      const Component = route.component;
+      return <Route path={route.path} key={indx} element={
+        <ProtectedRoutes>
+          {Component}
+        </ProtectedRoutes>
+      } />
+  })
 
   return (
     <Router>
       <Routes>
           {getRoutes(authRoutes)}
-        {/* {getProtectedRoutes(protectedRoutes)} */}
+        {getProtectedRoutes(privateRoutes)}
       </Routes>
     </Router>
   );

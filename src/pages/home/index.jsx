@@ -1,4 +1,5 @@
 import React, {useState} from "react";
+import { Link } from "react-router-dom";
 import { BiWallet } from 'react-icons/bi';
 import { BsBoxSeam } from 'react-icons/bs';
 import { VscRocket } from 'react-icons/vsc';
@@ -8,80 +9,21 @@ import Footer from "../../components/footer";
 import Navbar from "../../components/nav-bar";
 import HeroCard from "../../components/hero-card";
 import ServiceCard from "../../components/service-card";
-import { Link } from "react-router-dom";
-import axios from "axios";
 import WhatsappButton from "../../components/whatsapp-btn";
 
-const Home = () => {
+
+const Home = (props) => {
     const [trackingCode, setTrackingCode] = useState('');
 
     const handleTrackItem = () => {
-        let url = `http://localhost/ifex-backend/api/track/trans_track.php`;
-        if(trackingCode){
-            url += `?tracking_code=${trackingCode}`
-            axios.get(url)
-            .then(res => {
-                if(res.data){
-                    window.location = `/track/search/${trackingCode}`;
-                }
-            })
-            .catch(err => console.log(err));
-        }
+        if(trackingCode) window.location = `/track/search/${trackingCode}`;
+        return;
     }
 
     return (
         <>
             <Navbar />
             <div id="swiper">
-                {/* <Swiper
-            // install Swiper modules
-            breakpoints={{
-                // when window width is >= 640px
-                0: {
-                width: 700,
-                slidesPerView: 1,
-                },
-                // when window width is >= 768px
-                600: {
-                width: 700,
-                slidesPerView: 2,
-                },
-                900:{
-                width:700,
-                slidesPerView:3
-                },
-                1200:{
-                width:700,
-                slidesPerView:3
-                },
-                1536:{
-                width:700,
-                slidesPerView:4
-                }
-            }}
-            modules={[Autoplay, Navigation, Pagination, Scrollbar, A11y]}
-            spaceBetween={20}
-            slidesPerView={1}
-            navigation={ true}
-            allowSlideNext={true}
-            autoplay={{
-                delay: 2500,
-                disableOnInteraction: false,
-            }}
-            pagination={{ clickable: true }}
-            onSwiper={(swiper) => console.log(swiper)}
-            onSlideChange={() => console.log("slide change")}
-            >
-            {
-            [1].map((e,i)=>{
-            return(
-                <SwiperSlide key={i}> 
-                    <HeroCard />
-                </SwiperSlide>
-            )
-            })    
-            }  
-                </Swiper> */}
                 <HeroCard />
             </div>
 

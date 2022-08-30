@@ -24,9 +24,16 @@ const Login = () => {
     const handleSubmit = () => {
         if(inputCheck()){
             console.log('submitted');
-            const payload = { email, password };
-            axios.post('', payload)
-            .then(res => console.log(res))
+            const payload = { email: email.value, password: password.value };
+            const url = `http://localhost/ifex-backend/api/employee/login.php`;
+            axios.post(url, payload)
+            .then(res => {
+                const {status, payload} = res.data;
+                if(status){
+                    localStorage.setItem('expiresIn', payload.expiresIn);
+                    window.location = `/admin/dashboard`;
+                }
+            })
             .catch(err => console.log(err));
         }
         return;
@@ -47,7 +54,7 @@ const Login = () => {
                             <form>
                                 <div className='my-6'>
                                     <input 
-                                        className='px-6 py-2 rounded-lg w-full' 
+                                        className='px-6 py-2 rounded-lg w-full bg-gray-50' 
                                         type="text" 
                                         placeholder='email'
                                         value={email.value}
@@ -56,7 +63,7 @@ const Login = () => {
                                 </div>
                                 <div className='my-6'>
                                     <input 
-                                        className='px-6 py-2 rounded-lg w-full' 
+                                        className='px-6 py-2 rounded-lg w-full bg-gray-50' 
                                         type="password" 
                                         placeholder='****' 
                                         value={password.value}

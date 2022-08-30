@@ -1,8 +1,8 @@
 import { Navigate } from 'react-router-dom';
 
 export const ProtectedRoutes = ({children}) => {
-    const token = localStorage.getItem('token');
-    if(token){
+    const expiresIn = localStorage.getItem('expiresIn');
+    if(expiresIn){
         return children;
     }
     return <Navigate to="/" replace />
@@ -11,7 +11,7 @@ export const ProtectedRoutes = ({children}) => {
 export const UnProtectedRoutes = ({children}) => {
     const token = localStorage.getItem('token');
     if(token){
-        <Navigate to="/dashboard" replace />
+        <Navigate to="/admin/dashboard" replace />
     }
     return children;
 }
