@@ -1,4 +1,7 @@
 import React from 'react';
+import ScrollAnimation from 'react-animate-on-scroll';
+import { Link } from 'react-router-dom';
+
 import ifexVan from '../../assets/images/ifex-van.png';
 
 
@@ -12,12 +15,16 @@ const HeroCard = () => {
                 </div>
 
                 <div className='mt-4 mb-8 text-center'>
-                    <button className='border-4 border-white bg-transparent text-white px-4 py-4 rounded-lg'>Read more</button>
+                    <button className='border-4 border-white bg-transparent text-white px-4 py-4 rounded-lg'>
+                        <Link to="/about-us">Read more</Link>
+                    </button>
                 </div>
                 
                 <div className='my-8 w-full grid grid-cols-1' >
-                    <div className='flex justify-center'>
-                        <img src={ifexVan} alt="ifexVan" className='hover:ml-30' width="50%" height="246px" />
+                    <div className='mx-auto w-8/12 text-center'>
+                        <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft'>
+                            <img src={ifexVan} alt="ifexVan" className='' width="80%" height="246px" />
+                        </ScrollAnimation>
                     </div>
                     {/* <div className='align-left'>
                         <img src={forklift} alt="truck2" width="300px" height="246px" />

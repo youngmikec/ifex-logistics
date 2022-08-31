@@ -10,6 +10,8 @@ import Navbar from "../../components/nav-bar";
 import HeroCard from "../../components/hero-card";
 import ServiceCard from "../../components/service-card";
 import WhatsappButton from "../../components/whatsapp-btn";
+import { services } from "../../data/services";
+import ScrollAnimation from "react-animate-on-scroll";
 
 
 const Home = (props) => {
@@ -30,48 +32,58 @@ const Home = (props) => {
             {/* Why Choose us */}
             <section id="choos-us" className="mt-20">
                 <div className="my-8">
-                    <h2 className="title text-center">Why Choose Us</h2>
+                    <ScrollAnimation animateIn='bounceInRight' animateOut='bounceOutLeft'>
+                        <h2 className="title text-center">Why Choose Us</h2>
+                    </ScrollAnimation>
                 </div>
                 <div className="w-10/12  mx-auto">
                     <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 w-full">
                         <div className="mx-4 my-6">
-                            <div className="mx-auto w-max text-center">
-                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
-                                    <BsBoxSeam />
+                            <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
+                                <div className="mx-auto w-max text-center">
+                                    <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
+                                        <BsBoxSeam />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="text-center my-6">
-                                <h2 className="text-[#058AB3] text-xl">
-                                    <b>BETTER</b>
-                                </h2>
-                            </div>
-                            <p>Ifex uses the power of technology to give you more visibility and more flexibility for your urban, last-mile shipments</p>
+                                <div className="text-center my-6">
+                                    <h2 className="text-[#058AB3] text-xl">
+                                        <b>BETTER</b>
+                                    </h2>
+                                </div>
+                                <p>Ifex uses the power of technology to give you more visibility and more flexibility for your urban, last-mile shipments</p>
+                            </ScrollAnimation>
+                            
                         </div>
                         <div className="mx-4 my-6">
-                            <div className="mx-auto w-max text-center">
-                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
-                                    <BiWallet />
+                            <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
+                                <div className="mx-auto w-max text-center">
+                                    <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
+                                        <BiWallet />
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="text-center my-6">
-                                <h2 className="text-[#058AB3] text-xl">
-                                    <b>CHEAPER</b>
-                                </h2>
-                            </div>
-                            <p>Our platform cuts the unnecessary logistics steps to make B2B deliveries more affordable, without hidden costs</p>
+                                <div className="text-center my-6">
+                                    <h2 className="text-[#058AB3] text-xl">
+                                        <b>CHEAPER</b>
+                                    </h2>
+                                </div>
+                                <p>Our platform cuts the unnecessary logistics steps to make B2B deliveries more affordable, without hidden costs</p>
+                            </ScrollAnimation>
                         </div>
+
                         <div className="mx-4 my-6">
-                            <div className="mx-auto w-max text-center">
-                                <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
-                                    <VscRocket /> 
+                            <ScrollAnimation animateIn='fadeIn' animateOut='fadeOut'>
+                                <div className="mx-auto w-max text-center">
+                                    <div className="p-4 border-2 border-gray-600 rounded-full text-3xl text-[#058AB3]">
+                                        <VscRocket /> 
+                                    </div>
                                 </div>
-                            </div>
-                            <div className="text-center my-6">
-                                <h2 className="text-[#058AB3] text-xl">
-                                    <b>FASTER</b>
-                                </h2>
-                            </div>
-                            <p>Ifex uses the power of technology to give you more visibility and more flexibility for your urban, last-mile shipments</p>
+                                <div className="text-center my-6">
+                                    <h2 className="text-[#058AB3] text-xl">
+                                        <b>FASTER</b>
+                                    </h2>
+                                </div>
+                                <p>Ifex uses the power of technology to give you more visibility and more flexibility for your urban, last-mile shipments</p>
+                            </ScrollAnimation>
                         </div>
                     </div>
 
@@ -143,22 +155,24 @@ const Home = (props) => {
             {/* Services */}
             <div id="service" style={{height: 'max-content'}}>
                 <div className="mx-auto w-9/12 my-12">
-                    <div className="my-16">
-                        <h1 className="title text-center">Our Services</h1>
-                    </div>
-                    <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-
-                        <div>
-                            <ServiceCard title="HOUSE TO HOUSE PICKUP" />
+                        <div className="my-16">
+                            <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                                <h1 className="title text-center">Our Services</h1>
+                            </ScrollAnimation>
                         </div>
-                        <div>
-                            <ServiceCard title="HAULAGE" />
-                        </div>
-                        <div>
-                            <ServiceCard title="OVERSEAS SHIPPING" />
-                        </div>
-                        
-                    </div>
+                        <ScrollAnimation animateIn="fadeIn" animateOut="fadeOut">
+                            <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
+                                    {
+                                        services.length > 0 &&
+                                        services.map((service, indx) => {
+                                            return <div key={indx}>
+                                                <ServiceCard title={service.title} description={service.description} />
+                                            </div>
+                                        })
+                                    }
+                                
+                            </div>
+                        </ScrollAnimation>
                 </div>
             </div>
 

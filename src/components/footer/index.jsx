@@ -13,16 +13,13 @@ const Footer = () => {
                             <h1 className='text-[#058AB3] text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Our Services</h1>
                             <ul className='list-none'>
                                 <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
-                                    <Link to="/services">Road Transportation</Link>
+                                    <Link to="/services">House to house pickup</Link>
                                 </li>
                                 <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
-                                    <Link to="/services">Packaging</Link>
+                                    <Link to="/services">Haulage</Link>
                                 </li>
                                 <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
-                                    <Link to="/services">Storage</Link>
-                                </li>
-                                <li className='list-item my-8 text-gray-300 hover:text-[#058AB3] cursor-pointer'>
-                                    <Link to="/services">Warehousing</Link>
+                                    <Link to="/services">Oversea shipping</Link>
                                 </li>
                             </ul>
                         </div>
