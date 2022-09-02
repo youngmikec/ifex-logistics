@@ -7,11 +7,26 @@ import { VscRocket } from 'react-icons/vsc';
 import './index.css';
 import Footer from "../../components/footer";
 import Navbar from "../../components/nav-bar";
-import HeroCard from "../../components/hero-card";
+import HeroCardOne from "../../components/hero-card-one";
 import ServiceCard from "../../components/service-card";
 import WhatsappButton from "../../components/whatsapp-btn";
 import { services } from "../../data/services";
 import ScrollAnimation from "react-animate-on-scroll";
+import HeroCardTwo from "../../components/hero-card-two";
+
+// Swiper
+import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import { Autoplay } from 'swiper';
+
+
+// swiper styles
+import 'swiper/css';
+import 'swiper/css/navigation';
+import 'swiper/css/pagination';
+import 'swiper/css/scrollbar';
+import HeroCardThree from "../../components/hero-card-three";
+
 
 
 const Home = (props) => {
@@ -26,7 +41,32 @@ const Home = (props) => {
         <>
             <Navbar />
             <div id="swiper">
-                <HeroCard />
+                {/* <HeroCardOne /> */}
+                {/* <HeroCardTwo /> */}
+                <Swiper
+                    modules={[Autoplay, Navigation, Scrollbar, A11y]}
+                    spaceBetween={10}
+                    loop={true}
+                    autoplay={{
+                      delay: 5000,
+                      disableOnInteraction: false,
+                    }}
+                    slidesPerView={1}
+                    navigation
+                    onSwiper={(swiper) => console.log(swiper)}
+                    onSlideChange={() => console.log('slide change')}
+                    >
+                    <SwiperSlide>
+                      <HeroCardOne />
+                    </SwiperSlide>
+                    {/* <SwiperSlide>
+                      <HeroCardTwo />
+                    </SwiperSlide> */}
+                    <SwiperSlide>
+                      <HeroCardThree />
+                    </SwiperSlide>
+                    
+                </Swiper>
             </div>
 
             {/* Why Choose us */}
@@ -166,7 +206,7 @@ const Home = (props) => {
                                         services.length > 0 &&
                                         services.map((service, indx) => {
                                             return <div key={indx}>
-                                                <ServiceCard title={service.title} description={service.description} />
+                                                <ServiceCard title={service.title} description={service.description} serviceImg={service.serviceImg} />
                                             </div>
                                         })
                                     }

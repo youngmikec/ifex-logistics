@@ -1,14 +1,20 @@
-import React from 'react';
+import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
+
 import logo from '../../assets/images/White.png';
+import './style.css';
 
 
 const Navbar = () => {
+    const [show, setShow] = useState(false);
+    const toggleShowDrowdown = () => {
+        setShow(!show);
+    }
     return (
         <>
             <div className="w-full shadow-md bg-[#058AB3] text-white">
-                <div className='lg:block md:hidden sm:hidden'>
+                <div className='main-content'>
                     <div className="mx-auto lg:w-10/12 md:w-11/12 sm:w-full flex justify-between py-2">
                         <div className="" style={{width: '10%'}}>
                             <img src={logo} style={{width: '100%'}} alt="logo" />
@@ -46,7 +52,7 @@ const Navbar = () => {
                     </div>
                 </div>
 
-                <div className="lg:hidden md:block sm:block mx-auto w-10/12">
+                <div className="dropdownmenu mx-auto w-10/12">
                     <div className='flex justify-between'>
                         <div className="mt-5" style={{width: '15%'}}>
                             <img src={logo} style={{width: '100%'}} alt="logo" />
@@ -63,9 +69,9 @@ const Navbar = () => {
                                         leading-tight
                                         uppercase
                                         rounded
-                                        hover:bg-blue-700 hover:shadow-lg
-                                        focus:bg-blue-700 focus:shadow-lg focus:outline-none focus:ring-0
-                                        active:bg-blue-800 active:shadow-lg active:text-white
+                                        hover:bg-white hover:shadow-lg hover:text-[#058AB3]
+                                        focus:bg-white focus:text-[#058AB3] focus:shadow-lg focus:outline-none focus:ring-0
+                                        active:bg-white active:shadow-lg active:text-[#058AB3]
                                         transition
                                         duration-150
                                         ease-in-out
@@ -76,7 +82,8 @@ const Navbar = () => {
                                         type="button"
                                         id="dropdownMenuButton1"
                                         data-bs-toggle="dropdown"
-                                        aria-expanded="false"
+                                        aria-expanded="true"
+                                        onClick={() => toggleShowDrowdown()}
                                     >
                                     <span className='font-lg'>
                                         <FiMenu />
@@ -84,15 +91,13 @@ const Navbar = () => {
                                 
                                     </button>
                                     <ul
-                                        className="
-                                        dropdown-menu
-                                        min-w-max
+                                        className={`dropdown-menu
+                                        min-w-6
                                         absolute
-                                        hidden
+                                        ${show ? 'block' : 'hidden'}
                                         bg-white
                                         text-base
                                         z-50
-                                        float-left
                                         py-2
                                         list-none
                                         text-left
@@ -102,7 +107,7 @@ const Navbar = () => {
                                         m-0
                                         bg-clip-padding
                                         border-none
-                                        "
+                                        "`}
                                         aria-labelledby="dropdownMenuButton1"
                                         id='dropdownMenuButton1'
                                     >

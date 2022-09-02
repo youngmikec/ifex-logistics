@@ -30,6 +30,27 @@
     transform: skewY(4deg);
     -moz-transform: skewY(4deg);
 }
+
+@media screen and (max-width: 415px) {
+    .skew-wrapper {
+        height: 1100px;
+    }
+    .title {
+        font-size: 2rem;
+        font-weight: 800;
+    }
+}
+
+@media screen and (max-width: 270px) {
+    .skew-wrapper {
+        height: 1300px;
+    }
+    .title {
+        font-size: 1rem;
+        font-weight: 800;
+    }
+}
+
 .track-content-wrapper {
     position: absolute;
     top: 0rem;
@@ -47,7 +68,7 @@
 .qt-img {
     background-image: url('../../assets/images/van.png');
     background-repeat: no-repeat;
-    background-size: cover;
+    background-size: contain;
     background-position: center center;
     max-height: 500px;
     width: 90%

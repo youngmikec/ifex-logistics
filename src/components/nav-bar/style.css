@@ -1,0 +1,18 @@
+.main-content {
+    display: block;
+}
+
+.dropdownmenu {
+    display: none;
+}
+
+@media screen and (max-width: 642px) {
+    .main-content {
+        display: none;
+    }
+    
+    .dropdownmenu {
+        display: block;
+    }
+    
+}

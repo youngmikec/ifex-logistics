@@ -19,7 +19,7 @@ const Services = () => {
                                 services.length > 0 && 
                                 services.map((service, index) => {
                                     return <div key={index}>
-                                    <ServiceCard title={service.title} description={service.description} />
+                                    <ServiceCard title={service.title} description={service.description} serviceImg={service.serviceImg} />
                                 </div>
                                 })
                             }
