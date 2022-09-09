@@ -6,8 +6,8 @@ const AboutUs = () => {
     return (
         <>
             <Navbar />
-                <div className="bg-[#f5f5f5] w-full h-max py-12">
-                    <div className="mx-auto lg:w-10/12">
+                <div className="bg-[#f5f5f5] w-full h-max py-12 container">
+                    <div className="mx-auto w-10/12">
                         <div className="bg-white rounded-lg p-8 my-8">
                             <h3 className="sub-title text-[#058AB3]">Our Mission</h3>
                             <p className="my-4 text-gray-500">Our mission is to efficiently provide affordable and reliable logistics system for our customers using all our available resources.</p>

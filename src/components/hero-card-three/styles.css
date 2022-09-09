@@ -3,4 +3,18 @@
     background-repeat: no-repeat;
     background-size: contain;
     background-position: center;
+    min-height: 500px;
+    max-height: 600px;
+}
+
+@media screen and (max-width: 450px) {
+    .wrapper {
+        background-image: url('../../assets/images/Airplane.png');
+        background-repeat: no-repeat;
+        background-size: contain;
+        background-position: center;
+        min-height: 300px;
+        max-height: 370px;
+    }
+    
 }

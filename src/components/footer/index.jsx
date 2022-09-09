@@ -1,5 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
+import { AiFillFacebook, AiOutlineInstagram } from 'react-icons/ai';
 import googlePlayIcon from '../../assets/images/googleplay.svg';
 import appSotroeIcone from '../../assets/images/appstore.svg';
 
@@ -8,7 +9,7 @@ const Footer = () => {
         <>
             <div className="bg-[#333] w-full pt-20 pb-8">
                 <div className='mx-auto w-10/12'>
-                    <div className='grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1 '>
+                    <div className='grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 '>
                         <div>
                             <h1 className='text-[#058AB3] text-3xl font-bold sub-title' style={{fontWeight: 'bolder'}}>Our Services</h1>
                             <ul className='list-none'>
@@ -44,6 +45,18 @@ const Footer = () => {
                                     <img src={googlePlayIcon} alt="googleplay" />
                                 </span>
                             </div>
+                            <div className='flex justify-start text-gray-300 text-xl my-4'>
+                                <span className='mr-4'>
+                                    <a href="https://www.facebook.com/ifexexpressnig" target="_blank" rel='noreferrer'>
+                                        <AiFillFacebook />
+                                    </a>
+                                </span>
+                                <span className='mx-2'>
+                                    <a href="https://www.instagram.com/ifexexpressnig/" target="_blank" rel='noreferrer'>
+                                        <AiOutlineInstagram />
+                                    </a>
+                                </span>
+                            </div>
                         </div>
                     </div>
 
@@ -55,6 +68,7 @@ const Footer = () => {
                         <div>
                             <p className='hover:text-[#058AB3]'>Terms and Conditions | Privacy Policies</p>
                         </div>
+                        
                     </div>
                 </div>
             </div>

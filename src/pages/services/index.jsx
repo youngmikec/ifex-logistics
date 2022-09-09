@@ -14,16 +14,18 @@ const Services = () => {
                         <div className="my-16">
                             <h1 className="title text-center">Our Services</h1>
                         </div>
-                        <div className="grid lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-1">
-                            {
-                                services.length > 0 && 
-                                services.map((service, index) => {
-                                    return <div key={index}>
-                                    <ServiceCard title={service.title} description={service.description} serviceImg={service.serviceImg} />
-                                </div>
-                                })
-                            }
-                            
+                        <div className="mx-auto container">
+                            <div className="grid grid-cols-1 lg:grid-cols-3 md:grid-cols-2 sm:grid-cols-2 sm:space-x-4">
+                                {
+                                    services.length > 0 && 
+                                    services.map((service, index) => {
+                                        return <div key={index}>
+                                        <ServiceCard title={service.title} description={service.description} serviceImg={service.serviceImg} />
+                                    </div>
+                                    })
+                                }
+                                
+                            </div>
                         </div>
                     </div>
                 </div>
