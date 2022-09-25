@@ -15,7 +15,7 @@ const TrackItem = () => {
 
     const handleTrackItem = () => {
         setLoading(true);
-        let url = `http://localhost/ifex-backend/api/track/trans_track.php`;
+        let url = `https://www.ifexexpressnig.com/ifex-backend/api/track/trans_track.php`;
         if(tracking_code){
             url += `?tracking_code=${tracking_code}`
             axios.get(url)

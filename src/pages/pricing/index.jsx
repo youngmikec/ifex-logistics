@@ -9,7 +9,7 @@ const Pricing = () => {
     const [states, setStates] = useState([]);
 
     const handleFetchStates = () => {
-        const url = `http://localhost/ifex-backend/api/states/read.php`;
+        const url = `https://www.ifexexpressnig.com/ifex-backend/api/states/read.php`;
         axios.get(url)
         .then(res => {
             console.log('states', res);

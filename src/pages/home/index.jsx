@@ -12,10 +12,9 @@ import ServiceCard from "../../components/service-card";
 import WhatsappButton from "../../components/whatsapp-btn";
 import { services } from "../../data/services";
 import ScrollAnimation from "react-animate-on-scroll";
-import HeroCardTwo from "../../components/hero-card-two";
 
 // Swiper
-import { A11y, Navigation, Pagination, Scrollbar } from 'swiper';
+import { A11y, Navigation, Scrollbar } from 'swiper';
 import { Swiper, SwiperSlide } from 'swiper/react';
 import { Autoplay } from 'swiper';
 

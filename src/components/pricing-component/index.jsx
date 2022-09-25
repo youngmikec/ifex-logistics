@@ -25,7 +25,7 @@ function PricingComp({states}) {
     
     const handleEstimatePrice = () => {
         setLoading(true);
-        const url = `http://localhost/ifex-backend/api/pricing/get_pricing.php`;
+        const url = `https://www.ifexexpressnig.com/ifex-backend/api/pricing/get_pricing.php`;
         const payload = {
             state_id: originatingState,
             category

@@ -8,7 +8,7 @@ const Branches = () => {
     const [branches, setBranches] = useState([]);
 
     const fetchBranches = () => {
-        const url = `http://localhost/ifex-backend/api/branches/read.php`;
+        const url = `https://www.ifexexpressnig.com/ifex-backend/api/branches/read.php`;
         axios.get(url).then(res => {
             setBranches(res.data.payload);
         }).catch(err => console.log(err));

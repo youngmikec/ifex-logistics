@@ -23,9 +23,8 @@ const Login = () => {
 
     const handleSubmit = () => {
         if(inputCheck()){
-            console.log('submitted');
             const payload = { email: email.value, password: password.value };
-            const url = `http://localhost/ifex-backend/api/employee/login.php`;
+            const url = `https://www.ifexexpressnig.com/ifex-backend/api/employee/login.php`;
             axios.post(url, payload)
             .then(res => {
                 const {status, payload} = res.data;
@@ -40,7 +39,7 @@ const Login = () => {
     }
     return (
         <>
-            <div className='bg-[#058AB3] wrapper'>
+            <div className='bg-[#058AB3]'>
                 <div className="flex justify-center">
 
                     <div className="my-6 bg-white rounded-lg mx-auto lg:w-5/12 sm:w-6/12 lg:px-20 sm:px-12 py-6">
