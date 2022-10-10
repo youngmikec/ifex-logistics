@@ -14,7 +14,9 @@ function PricingComp({states}) {
     const calculatePrice = (data) => {
         let total = 0;
         if(data){
-            const {max_weight, base_price, incremental_charge} = data;
+            const max_weight = parseInt(data['max_weight']);
+            const base_price = parseInt(data['base_price']);
+            const incremental_charge = parseInt(data['incremental_charge']);
             total += base_price;
             if(weight > max_weight){
                 total += ((incremental_charge * (weight - max_weight)))
@@ -45,7 +47,7 @@ function PricingComp({states}) {
 
   return (
     <>
-          <div className="my-20 mx-auto rounded-lg p-6 shadow-lg bg-gray-50 lg:w-8/12 md:w-9/12 sm:w-11/12 h-max">
+        <div className="my-20 mx-auto rounded-lg p-6 shadow-lg bg-gray-50 lg:w-8/12 md:w-9/12 sm:w-11/12 h-max">
                 <div>
                     <div className='mt-6 mb-8'>
                         <h1 className="sub-title text-center">
@@ -161,7 +163,7 @@ function PricingComp({states}) {
 
                     
                 </div>
-            </div>
+        </div>
     </>
 
   )

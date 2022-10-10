@@ -39,10 +39,10 @@ const Login = () => {
     }
     return (
         <>
-            <div className='bg-[#058AB3]'>
+            <div className='bg-[#058AB3]' style={{height: '100vh'}}>
                 <div className="flex justify-center">
 
-                    <div className="my-6 bg-white rounded-lg mx-auto lg:w-5/12 sm:w-6/12 lg:px-20 sm:px-12 py-6">
+                    <div className="mt-12 bg-white rounded-lg mx-auto lg:w-5/12 sm:w-6/12 lg:px-20 sm:px-12 py-6">
                         <div className='flex justify-center mx-auto' style={{width: '25%'}}>
                             <img src={logo} style={{width: '100%'}} alt="logo" />
                         </div>

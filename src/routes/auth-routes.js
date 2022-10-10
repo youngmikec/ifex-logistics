@@ -33,7 +33,7 @@ const authRoutes = [
         component: <Branches />
     },
     {
-        path: '/track/search/:tracking_code',
+        path: '/track/:tracking_code',
         component: <TrackItem />
     },
     {

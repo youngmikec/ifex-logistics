@@ -46,19 +46,19 @@ const TrackingDetail = ({trackingDetail}) => {
                     <div className='mt-16'>
                         <div className='flex justify-start my-6'>
                             <span className={`rounded-full p-3 ${trackingDetail.status_name === 'PROCCESSING' ? 'bg-[#058AB3]' : 'bg-gray-700'}`}></span>
-                            <div className='lg:mx-16 sm:mx-6 text-md'>Item is been Processed at orginating Hub</div>
+                            <div className='lg:mx-16 sm:mx-6 text-sm'>Item is been Processed at orginating Hub</div>
                         </div>
                         <div className='flex justify-start my-6'>
                             <span className={`rounded-full p-3 ${trackingDetail.status_name === 'DEPARTED_HUB' ? 'bg-[#058AB3]' : 'bg-gray-700'}`}></span>
-                            <div className='lg:mx-16 sm:mx-6 text-md'>Item has Departed Hub</div>
+                            <div className='lg:mx-16 sm:mx-6 text-sm'>Item has Departed Hub</div>
                         </div>
                         <div className='flex justify-start my-6'>
                             <span className={`rounded-full p-3 ${trackingDetail.status_name === 'AT_DESTINATION' ? 'bg-[#058AB3]' : 'bg-gray-700'}`}></span>
-                            <div className='lg:mx-16 sm:mx-6 text-md'>Item has Arrived at the Destination Hub, pending collection</div>
+                            <div className='lg:mx-16 sm:mx-6 text-sm'>Item has Arrived at the Destination Hub, pending collection</div>
                         </div>
                         <div className='flex justify-start my-6'>
                             <span className={`rounded-full p-3 ${trackingDetail.status_name === 'ARRIVED' ? 'bg-[#058AB3]' : 'bg-gray-700'}`}></span>
-                            <div className='lg:mx-16 sm:mx-6 text-md'>Item has been Delivered</div>
+                            <div className='lg:mx-16 sm:mx-6 text-sm'>Item has been Delivered</div>
                         </div>
                     </div>
                 </div>

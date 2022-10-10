@@ -1,4 +1,4 @@
-import React, {useState} from "react";
+import React, { useState, useRef } from "react";
 import { Link } from "react-router-dom";
 import { BiWallet } from 'react-icons/bi';
 import { BsBoxSeam } from 'react-icons/bs';
@@ -30,9 +30,11 @@ import HeroCardThree from "../../components/hero-card-three";
 
 const Home = (props) => {
     const [trackingCode, setTrackingCode] = useState('');
+    const [trackingUrl, setTrackingUrl] = useState('');
+    const linkRef = useRef(null);
 
     const handleTrackItem = () => {
-        if(trackingCode) window.location = `/track/search/${trackingCode}`;
+        linkRef.current.click();
         return;
     }
 
@@ -150,18 +152,21 @@ const Home = (props) => {
                                         <input 
                                         type="text" 
                                         value={trackingCode}
-                                        onChange={(e) => setTrackingCode(e.target.value)}
+                                        onChange={(e) => {
+                                            setTrackingUrl(`/track/${e.target.value}`);
+                                            setTrackingCode(e.target.value)
+                                        }}
                                         className="w-full rounded-lg bg-white px-3 py-3 broder-2 border-[#058AB3]" 
                                         placeholder="Enter shipment code" />
                                     </div>
                                     <div className="my-8 items-center">
-                                        <button onClick={(e) => {
-                                            e.preventDefault();
-                                            handleTrackItem();
-                                        }} className="border-2 border-[#058AB3] text-white rounded-lg py-1 px-8 hover:bg-white hover:py-2 hover:text-[#058AB3] transition-all">
-                                            <span className="text-2xl">track</span>
-                                        </button>
-                                        
+                                        <Link to={trackingUrl} ref={linkRef}>
+                                            <button onClick={() => {
+                                                handleTrackItem();
+                                            }} className="border-2 border-[#058AB3] text-white rounded-lg py-1 px-8 hover:bg-white hover:py-2 hover:text-[#058AB3] transition-all">
+                                                    <span className="text-2xl">track</span>
+                                            </button>
+                                        </Link>
                                     </div>
                                 </form>
                             </div>

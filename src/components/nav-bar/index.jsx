@@ -2,7 +2,7 @@ import React, { useState} from 'react';
 import { Link } from 'react-router-dom';
 import { FiMenu } from 'react-icons/fi';
 
-import logo from '../../assets/images/White.png';
+import logo from '../../assets/images/ifex-logo.png';
 import './style.css';
 
 
@@ -16,7 +16,7 @@ const Navbar = () => {
             <div className="w-full shadow-md bg-[#058AB3] text-white">
                 <div className='main-content'>
                     <div className="mx-auto lg:w-10/12 md:w-11/12 sm:w-full flex justify-between py-2">
-                        <div className="" style={{width: '10%'}}>
+                        <div className="" style={{width: '10%', display: 'inline-flex'}}>
                             <img src={logo} style={{width: '100%'}} alt="logo" />
                         </div>
                         {/* <div className="pt-4">
